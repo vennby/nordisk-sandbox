@@ -6,3 +6,7 @@
 1. components of a draft study?
 2. components of a clinical trial document (function for extraction of each component)
 3. what is the purpose of draft study? what is it used for, and what more can be created? (to include as functionalities in the product)
+
+#### Features
+
+1. Different types of views should be available

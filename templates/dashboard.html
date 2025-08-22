@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpecAI – Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-indigo-600">SpecAI</h1>
+        <nav class="space-x-6 hidden md:flex">
+          <a href="/dashboard" class="text-indigo-600 font-semibold"
+            >Dashboard</a
+          >
+          <a href="/main" class="hover:text-indigo-600">Generate</a>
+          <a href="/logout" class="hover:text-indigo-600">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <section class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800">
+        Welcome back, {{ session['user'] }} 👋
+      </h2>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h3 class="text-sm text-gray-500">Total PDFs Processed</h3>
+          <p class="text-3xl font-bold text-indigo-600 mt-2">24</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h3 class="text-sm text-gray-500">Drafts Generated</h3>
+          <p class="text-3xl font-bold text-indigo-600 mt-2">18</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h3 class="text-sm text-gray-500">Avg. Accuracy</h3>
+          <p class="text-3xl font-bold text-indigo-600 mt-2">92%</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-md transition">
+          <h3 class="text-sm text-gray-500">Time Saved</h3>
+          <p class="text-3xl font-bold text-indigo-600 mt-2">36 hrs</p>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white p-8 rounded-2xl shadow mb-12">
+        <h3 class="text-2xl font-bold text-indigo-600 mb-6">Recent Activity</h3>
+        <table class="w-full border-collapse text-left">
+          <thead>
+            <tr class="text-gray-600 border-b">
+              <th class="pb-3">Date</th>
+              <th class="pb-3">File</th>
+              <th class="pb-3">Specs Generated</th>
+              <th class="pb-3">Status</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-b">
+              <td class="py-3">Aug 22, 2025</td>
+              <td>trial_study_01.pdf</td>
+              <td>Endpoints + Eligibility</td>
+              <td>
+                <span class="text-green-600 font-semibold">Completed</span>
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-3">Aug 19, 2025</td>
+              <td>studyX.pdf</td>
+              <td>Parameters</td>
+              <td>
+                <span class="text-green-600 font-semibold">Completed</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-3">Aug 14, 2025</td>
+              <td>cancer_trial.pdf</td>
+              <td>Eligibility</td>
+              <td>
+                <span class="text-yellow-600 font-semibold">In Review</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center">
+        <a
+          href="/main"
+          class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow hover:bg-indigo-700 transition"
+        >
+          + Generate New Study Specs
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 mt-10">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>&copy; 2025 SpecAI. All rights reserved.</p>
+        <div class="space-x-6 mt-4 md:mt-0">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <a href="mailto:contact@specai.com" class="hover:text-white"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

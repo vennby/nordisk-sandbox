@@ -1,0 +1,14 @@
+Draft Study Specifications
+==============================
+
+Endpoints:
+- Primary endpoint: Survival rate
+- Secondary endpoint: Adverse events
+
+Eligibility Criteria:
+- Adults 18-65
+- No prior chemotherapy
+
+Study Parameters:
+- Sample size: 200
+- Randomized, double-blind

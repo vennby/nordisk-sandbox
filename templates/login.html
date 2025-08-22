@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpecAI – Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gray-50 flex items-center justify-center min-h-screen font-sans"
+  >
+    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+      <h1 class="text-3xl font-bold text-center text-indigo-600 mb-6">
+        SpecAI Login
+      </h1>
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <div
+        class="bg-red-50 text-red-700 border border-red-200 rounded-lg p-4 mb-4"
+      >
+        {{ messages[0] }}
+      </div>
+      {% endif %} {% endwith %}
+      <form action="{{ url_for('login') }}" method="POST" class="space-y-6">
+        <div>
+          <label for="username" class="block text-gray-700 font-medium"
+            >Username</label
+          >
+          <input
+            type="text"
+            name="username"
+            id="username"
+            required
+            class="mt-2 w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label for="password" class="block text-gray-700 font-medium"
+            >Password</label
+          >
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            class="mt-2 w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
