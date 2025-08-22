@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpecAI – Draft Study Specifications</title>
+    <link rel="icon" href="static/images/logo.png" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-50 text-gray-900 font-sans">
-    <!-- Header -->
     <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
       <div
         class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <h1 class="text-2xl font-bold text-indigo-600">SpecAI</h1>
+        <!-- Logo + Title -->
+        <div class="flex items-center space-x-2">
+          <img
+            src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="SpecAI Logo"
+            class="h-10 w-10"
+          />
+          <h1 class="text-2xl font-bold text-indigo-600">SpecAI</h1>
+        </div>
+
+        <!-- Navigation -->
         <nav class="space-x-6 hidden md:flex">
           <a href="/dashboard" class="hover:text-indigo-600">Dashboard</a>
           <a href="/main" class="text-indigo-600 font-semibold">Generate</a>
@@ -107,16 +117,10 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-10 mt-10">
       <div
-        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-center"
       >
         <p>&copy; 2025 SpecAI. All rights reserved.</p>
-        <div class="space-x-6 mt-4 md:mt-0">
-          <a href="#" class="hover:text-white">Privacy</a>
-          <a href="#" class="hover:text-white">Terms</a>
-          <a href="mailto:contact@specai.com" class="hover:text-white"
-            >Contact</a
-          >
-        </div>
+        <div class="space-x-6 mt-4 md:mt-0"></div>
       </div>
     </footer>
   </body>
